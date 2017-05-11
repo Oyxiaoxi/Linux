@@ -43,5 +43,6 @@
 ## trace
 ```bash
 MAC追踪路由：traceroute weibo.com
+
 Win追踪路由：tracert weibo.com
 ```
