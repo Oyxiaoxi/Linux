@@ -39,3 +39,9 @@
 
 查找长度为0的文件：find . -empty
 ```
+
+## trace
+```bash
+MAC追踪路由：traceroute weibo.com
+Win追踪路由：tracert weibo.com
+```
