@@ -50,12 +50,11 @@ Win追踪路由：tracert weibo.com
 ## chown
 ```bash
 改变拥有者：chown -R 用户名称 文件目录
-
 ```
+
 ## chgrp
 ```bash
 改变拥有者：chgrp -R 用户名称 文件目录
-
 ```
 
 ## 命令行获取公网 IP
