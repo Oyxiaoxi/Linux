@@ -57,3 +57,75 @@ Win追踪路由：tracert weibo.com
 改变拥有者：chgrp -R 用户名称 文件目录
 
 ```
+
+## 命令行获取公网 IP
+
+### curl ipinfo.io
+```bash
+$ curl ipinfo.io
+```
+    {
+    "ip": "124.116.223.84",
+    "city": "Xi'an",
+    "region": "Shaanxi",
+    "country": "CN",
+    "loc": "34.2583,108.9286",
+    "org": "AS4134 CHINANET-BACKBONE"
+    }
+
+### curl httpbin.org/ip
+```bash
+curl httpbin.org/ip
+```
+
+    {
+    "origin": "124.116.223.84"
+    }
+
+### curl myip.ipip.net
+```bash
+$ curl myip.ipip.net
+```
+> 当前 IP：124.116.223.84  来自于：中国 陕西 宝鸡  电信
+
+### curl ip.sb
+```bash
+$ curl ip.sb
+```
+    124.116.223.84
+
+### curl -s ifcfg.cn/echo |python -m json.tool
+```bash
+$ curl -s ifcfg.cn/echo |python -m json.tool
+```
+    {
+        "headers": {
+            "ACCEPT": "*/*",
+            "CONNECTION": "close",
+            "HOST": "ifcfg.cn",
+            "USER-AGENT": "curl/7.54.0"
+        },
+        "host": "ifcfg.cn",
+        "ip": "124.116.223.84",
+        "location": "\u4e2d\u56fd \u9655\u897f \u5b9d\u9e21",
+        "method": "GET",
+        "path": "/echo",
+        "protocol": "http",
+        "query_string": "",
+        "url": "http://ifcfg.cn/echo",
+        "user_agent": "curl/7.54.0"
+    }
+
+### curl ifconfig.me
+```bash
+$ curl ifconfig.me
+```
+
+    load: 2.35  cmd: curl 13313 waiting 0.00u 0.00s
+    124.116.223.84
+
+## 80端口被占用
+```bash
+$ lsof -i :80
+```
+
