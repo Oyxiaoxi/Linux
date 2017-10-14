@@ -128,3 +128,8 @@ $ curl ifconfig.me
 $ lsof -i :80
 ```
 
+## Telnet 测试开放端口
+```bash
+# quit 退出
+$ telnet ip 端口
+```
