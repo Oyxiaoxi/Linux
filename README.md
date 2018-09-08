@@ -133,3 +133,9 @@ $ lsof -i :80
 # quit 退出
 $ telnet ip 端口
 ```
+
+## Git
+```bash
+git log # 提交日志
+git update-index --assume-unchanged config/pay.php # 过滤
+```
