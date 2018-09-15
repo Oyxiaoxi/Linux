@@ -135,10 +135,18 @@ $ telnet ip 端口
 ```
 
 ## Git
-```bash
-git log # 提交日志
-git remote add origin git@github.com:<username>/larabbs.git # <username> 用户名称
-git update-index --assume-unchanged config/pay.php # 过滤
+```git
+# 提交日志
+git log 
+# 恢复文件
+git checkout [file] 
+# 与主干同步
+git fetch origin
+git rebase origin/master
+# <username> 用户名称
+git remote add origin git@github.com:<username>/larabbs.git 
+# 过滤
+git update-index --assume-unchanged config/pay.php 
 ```
 
 ## Editorconfig
