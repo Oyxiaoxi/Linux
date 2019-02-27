@@ -38,6 +38,14 @@
 查找当前目录下权限不是644的php文件：find . -type f -name "*.php" ! -perm 644
 
 查找长度为0的文件：find . -empty
+
+*.html:表示查找所在目录下的所有扩展名为html的文件;
+SEARCHSTRING:要查找搜索的字符;
+REPLACESTRING:替换后的字符。
+记住:如果替换的字符包括 ()[]/"'!? 等等这样的特殊字符，你必须在字符前加上反斜杠\ 。
+
+find .|xargs grep -ri "SEARCHSTRING"
+find . -name '*.html,*.htm,*.js' -print0 | xargs -0 perl -pi -e 's/SEARCHSTRING/REPLACESTRING/g'
 ```
 
 ## trace
@@ -149,6 +157,15 @@ git checkout [file]
 # 与主干同步
 git fetch origin
 git rebase origin/master
+# 创建并切换到当前新建分支
+git checkout -b admin
+# 显示当前项目下的分支
+git branch
+# 合并分支
+git add -A && git commit -m 'admin'
+git checkout master && git merge admin
+# 删除分支
+git branch -d admin
 # <username> 用户名称
 git remote add origin git@github.com:<username>/larabbs.git 
 # 过滤
@@ -222,3 +239,5 @@ cp syncthing /usr/local/bin
 which syncthing 
 nohup syncthing & 或者 nohup /usr/local/binsyncthing &
 ```
+
+
