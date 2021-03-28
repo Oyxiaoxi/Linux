@@ -131,7 +131,16 @@ $ curl ifconfig.me
     load: 2.35  cmd: curl 13313 waiting 0.00u 0.00s
     124.116.223.84
 
+## 刷新 MAC Dns 缓存
+
+```bash
+sudo dscacheutil -flushcache
+# 配合 nslookup
+nslookup www.github.com
+```
+
 ## 80端口被占用
+
 ```bash
 $ lsof -i :80
 ```
@@ -149,6 +158,7 @@ netstat -anp|grep 3306
 ```
 
 ## Git
+
 ```git
 # 提交日志
 git log 
@@ -170,6 +180,10 @@ git branch -d admin
 git remote add origin git@github.com:<username>/larabbs.git 
 # 过滤
 git update-index --assume-unchanged config/pay.php 
+# 出错重联
+git remote set-url origin git@github.com:Oyxiaoxi/GoBlog.git
+# 测试 github 连接
+ssh -T git@github.com
 ```
 
 ## Editorconfig
